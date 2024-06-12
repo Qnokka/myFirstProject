@@ -1,19 +1,10 @@
-// const loginForm = document.getElementById("login-form");
-// qlogin-form이라는 id를 가진 Element 가져오기 (div)
-// const loginInput = loginForm.querySelector("input");
-// const loginButton = loginForm.querySelector("button");
-// login-form Element에서 Input과 button Element 가져오기
-
+const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const loginButton = document.querySelector("#login-form button");
 
-function handleLoginBtnClick() {
+function handleLoginSubmit(event) {
     //console.dir(loginInput); //input의 내용을 가져오기 위한 property 확인
-    const username = loginInput.value;
-    console.log(username);
+    event.preventDefault();
+    console.log(loginInput.value);
 }
 
-loginButton.addEventListener("click", handleLoginBtnClick);
-
-
-
+loginForm.addEventListener("submit", handleLoginSubmit);
