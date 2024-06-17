@@ -10,6 +10,9 @@ function handleLoginSubmit(event) {
     event.preventDefault();
     loginForm.classList.add(HIDDEN_CLASSNAME);
     const username = loginInput.value;
+    localStorage.setItem("username", username);
+    //username을 DB에 저장해주는 구문
+    //localStorage. setItem/getItem/removeItem을 통해 DB 작업
     greeting.innerText = `Hello, ${username} Keep Going`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
