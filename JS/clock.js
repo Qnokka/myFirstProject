@@ -1,8 +1,11 @@
 const clock = document.querySelector("#clock");
 
-function sayHello() {
-    console.log("hello");
+function getClock() {
+    const date = new Date();
+    clock.innerText = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
 }
 
-setInterval(sayHello, 5000);
-//두 개의 arg를 받는데 첫 번째는 실행하고자 하는 함수, 두 번째는 호출되는 함수의 간격(단위 : ms)
+getClock();
+//새로고침할 때 1초를 기다려야 하므로 처음엔 무조건 Load되도록
+setInterval(getClock, 1000);
+//setTimeout(getClock, 5000);
