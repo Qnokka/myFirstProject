@@ -14,7 +14,7 @@ function handleLoginSubmit(event) {
     const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);
     //username을 DB에 저장해주는 구문
-    //localStorage. setItem/getItem/removeItem을 통해 DB 작업
+    //localStorage. setItem/getItem/removeItem을 통해 DB 작업 : 작은 DB API
     paintGrettings(username);
 }
 
