@@ -9,6 +9,7 @@ function paintToDO(newTodo) {
     li.appendChild(span);
     span.innerText = newTodo;
     toDoList.appendChild(li);
+    //JS에서 HTML 생성하는 방식
 }
 
 function handleToDoSubmit(event) {
