@@ -4,7 +4,7 @@ const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 
 const TODOS_KEY = "todos";
-const toDos = [];
+let toDos = []; ///빈 값으로 시작되지 않기 위해 변수로 변경
 
 function saveToDOs() {
     localStorage.setItem(TODOS_KEY,JSON.stringify(toDos));
@@ -43,5 +43,7 @@ console.log(savedToDos);
 
 if(savedToDos !== null) {
     const parsedToDos = JSON.parse(savedToDos);
-    parsedToDos.forEach((item) => console.log("this is turn of ", item));
+    toDos = parsedToDos; //localStorage에 저장된 Array 값을 저장
+    //parsedToDos.forEach((item) => console.log("this is turn of ", item));
+    parsedToDos.forEach(paintToDO);
 }
