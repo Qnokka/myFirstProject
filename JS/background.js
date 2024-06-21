@@ -11,6 +11,7 @@ const bgImage = document.createElement("img");
 bgImage.src = `img/${chosenImage}`;
 
 document.body.appendChild(bgImage);
+//append는 가장 뒤에, prepend는 가장 위에 위치
 
 
 
