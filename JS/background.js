@@ -9,6 +9,7 @@ Javascript에사 무언가를 만들어 그걸 HTML에 추가하는 예제는 �
 
 const bgImage = document.createElement("img");
 bgImage.src = `img/${chosenImage}`;
+bgImage.id = "backgroundImage";
 
 document.body.appendChild(bgImage);
 //append는 가장 뒤에, prepend는 가장 위에 위치

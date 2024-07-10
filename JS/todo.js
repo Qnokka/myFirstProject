@@ -10,24 +10,30 @@ function saveToDOs() {
     localStorage.setItem(TODOS_KEY,JSON.stringify(toDos));
 }
 
-function deleteToDo(event) {
-    const li = event.target.parentElement;
-    li.remove();
-    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
-    saveToDOs();
+function deleteToDoHandler(event) {
+    const li = event.target.closest('li');
+    if (li) {
+        li.remove();
+        toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+        saveToDOs();
+    }
 }
 
 function paintToDO(newTodo) {
     const li = document.createElement("li");
-    li.id = newTodo.id;
+    li.id = newTodo.id; //고유 ID 설정
+    const divWrapper = document.createElement("div");
+    divWrapper.classList.add("todo-item"); //스타일링을 위한 클래스 추가
     const span = document.createElement("span");
     span.innerText = newTodo.text;
     const btn = document.createElement("button");
-    btn.innerText = "❌";
-    btn.addEventListener("click", deleteToDo);
-    li.appendChild(span);
-    li.appendChild(btn);
-    toDoList.appendChild(li);
+    btn.innerText = "🗑️";
+    btn.classList.add("todo-button"); //스타일링을 위한 클래스 추가
+    btn.addEventListener("click", deleteToDoHandler);
+    divWrapper.appendChild(span); //텍스트 추가
+    divWrapper.appendChild(btn);  //삭제 버튼 추가
+    li.appendChild(divWrapper);   //<li>요소에 <div>추가
+    toDoList.appendChild(li);     //To-Do 리스트에 <li>요소 추가
 }
 
 function handleToDoSubmit(event) {

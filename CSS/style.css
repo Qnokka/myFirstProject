@@ -1,3 +1,138 @@
 .hidden{
     display: none;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#backgroundImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+#greeting {
+    font-style: oblique;
+}
+
+#clock {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+form {
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 400px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgba(65, 48, 12, 0.7);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.todo-button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    /* 버튼을 동일한 간격으로 정렬 */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.todo-item span {
+    flex: 1; 
+    /* 텍스트가 넘치면 잘리지 않도록 */
+    margin-right: 10px; 
+    /* 텍스트와 버튼 사이 간격 설정 */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    max-width: 400px;
+}
+
+#quote {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 400px;
+}
+
+#weather {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+}
+
+#quote span, #weather span {
+    display: block;
+}
+
+#quote span:first-child {
+    font-style: italic;
+}
+
+#quote span:last-child {
+    margin-top: 5%;
+}
+
+#weather span:first-child {
+    font-weight: bold;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    body {
+        padding: 20px; 
+        /* 좁은 화면에서는 내용이 너무 붙지 않도록 패딩 추가 */
+    }
+
+    form, ul, #quote, #weather {
+        width: 100%; 
+        /* 좁은 화면에서는 요소들이 꽉 채워지도록 너비 조정 */
+        max-width: none; 
+        /* 최대 너비 제한 해제 */
+    }
+}

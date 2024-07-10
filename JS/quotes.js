@@ -1,43 +1,31 @@
 const quotes = [
     {
-        quote : "Learning without thought is labor lost; thought without learning is perilous.",
-        author : "Confucius",
+        quote : "他の人と違う生き方というのは、それだけ難しいものだよ。失敗しても他人のせいにはできないからね。",
+        author : "スタジオジブリ「耳をすませば」",
     },
     {
-        quote : "When love is in excess it brings a man no honor nor worthiness.",
-        author : "Euripides",
+        quote : "近くにあるものは小さく、遠くにあるものは大きく見えるものさ。",
+        author : "Euスタジオジブリ「耳をすませば」ripides",
     },
     {
-        quote : "The better part of valor is discretion, in which the better part I have saved my life.",
-        author : "William Shakespeare",
+        quote : "まだ磨かれていない自然のままの原石もそれ自体で美しいけれど、自分の中の原石を磨いて形を整えなければならない。とても努力が必要なことだよ。",
+        author : "スタジオジブリ「耳をすませば」",
     },
     {
-        quote : "Gravitation cannot be held responsible for people falling in love.",
-        author : "Albert Einstein",
+        quote : "君の人生の物語を素晴らしく書いてごらん。",
+        author : "スタジオジブリ「耳をすませば」",
     },
     {
-        quote : "Determine never to be idle...It is wonderful how much may be done if we are always doing.",
-        author : "Thomas Jefferson",
+        quote : "恐れずに行こう。夕方の風に乗って、星まで手が届くように！",
+        author : "スタジオジブリ「耳をすませば」",
     },
     {
-        quote : "Study the past if you would define the future.",
-        author : "Confucius",
+        quote : "なぜ変わってしまったのだろう？私も以前は明るくて可愛らしい子だったのに、本を読んでも昔のようにときめかない。頭の中で誰かがいつも現実とは違うと言っている。",
+        author : "スタジオジブリ「耳をすませば」",
     },
     {
-        quote : "You have to have confidence in your ability, and then be tough enough to follow through.",
-        author : "Rosalynn Carter",
-    },
-    {
-        quote : "With regard to excellence, it is not enough to know, but we must try to have and use it.",
-        author : "Aristoteles",
-    },
-    {
-        quote : "This bud of love, by summer's ripening breath, May prove a beauteous flower when next we meet.",
-        author : "William Shakespeare",
-    },
-    {
-        quote : "People find life entirely too time-consuming.",
-        author : "Stanislaw J. Lec",
+        quote : "お疲れ様。君は素敵な子だよ。急ぐ必要はない。ゆっくりと磨いていこう。",
+        author : "スタジオジブリ「耳をすませば」",
     }
 ]
 
